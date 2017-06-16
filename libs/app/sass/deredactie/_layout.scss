@@ -1,17 +1,17 @@
 html {
-  background: $nws-brand-white;
+  background: white;
 }
 body {
   max-width: 980px;
   margin: auto;
-  padding: 15px;
+  padding: 16px;
   background: $dr-bg;
   color: white;
 }
 
 p {
   font-family: roboto;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 #app__main {
@@ -25,12 +25,13 @@ p {
   }
 }
 
-.app__title {
+h2 {
   font-family: dincond-bold;
   letter-spacing: 1px;
+  margin-bottom: 16px;
 }
 
-.app__title:after {
+h2:after {
   background: $dr-green;
   content: " ";
   display: block;
