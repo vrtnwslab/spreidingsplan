@@ -1,8 +1,8 @@
 export default function reducer (
   state = {
-    projectName: 'oscars',
+    projectName: 'FR_president',
     realtime: true,
-    fetched: null
+    fetched: false
   }, action) {
   switch (action.type) {
     case 'FETCH_FILE':
