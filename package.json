@@ -1,6 +1,6 @@
 {
   "name": "webpack-boilerplate",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Webpack - React - Redux - Sass",
   "main": "index.jsx",
   "repository": "https://github.com/vrtnwslab/boilerplate.git",
