@@ -1,29 +1,39 @@
 import React, { Component } from 'react'
+import Example from 'components/Example/Example'
+import List from 'components/List/List'
 require('font-awesome-sass-loader')
 
 export default class Layout extends Component {
   render () {
     const {
-      data
-    } = this.props
+      candidates
+    } = this.props.data
+    const {
+      rounds
+    } = this.props.data
+    const candidateNames = Object.keys(candidates)
+
+    const listData = candidateNames.map((candidate) => {
+      return {
+        title: `${candidates[candidate].firstname} ${candidates[candidate].lastname}`,
+        subtitle: candidates[candidate].party,
+        img: candidates[candidate].img,
+        key: candidate,
+        value: `${Number(rounds[1][candidate]).toLocaleString('nl')}%`
+      }
+    })
 
     return (
-      <div id='app__main'>
-        <header>
-          <h2 className='app__title'>
+      <div className='app__main row'>
+        <header className='app__header small-24 columns'>
+          <h2 className='header__title'>
             {'Data loaded'}
           </h2>
         </header>
-        <section>
-          <i className='fa fa-angle-left' />
-          <p>
-            {' dolor sit amet, consectetur adipisicing elit. Doloribus debitis beatae numquam voluptas hic, temporibus harum, eos fugit quaerat corporis quisquam et optio eaque deserunt quidem saepe dolorem non assumenda!'}
-          </p>
-          <img
-            src='assets/images/foto.jpg'
-            alt='foto'
-          />
-        </section>
+        <div className='app__content small-24 columns'>
+          <Example />
+          <List data={listData} />
+        </div>
       </div>
     )
   }

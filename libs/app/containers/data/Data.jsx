@@ -28,7 +28,10 @@ class Data extends Component {
   }
 
   render () {
-    const {settings, data} = this.props
+    const {
+      settings,
+      data
+    } = this.props
 
     if (!settings.fetched) {
       return <div className='loading' />

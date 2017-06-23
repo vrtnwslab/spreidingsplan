@@ -30,12 +30,12 @@ export const fetchOnce = (projectName) => {
       .ref(`/${projectName}/`)
       .once('value')
       .then(
-          function (snapshot) {
-            dispatch({
-              type: 'FETCH_DATA_FULFILLED',
-              payload: snapshot.val()
-            })
-          }
+        function (snapshot) {
+          dispatch({
+            type: 'FETCH_DATA_FULFILLED',
+            payload: snapshot.val()
+          })
+        }
       )
   }
 }

@@ -23,7 +23,7 @@ module.exports = (env) => {
               {
                 loader: 'css-loader',
                 options: {
-                  modules: true,
+                  modules: false,
                   localIdentName: '[name]__[local]--[hash:base64:5]'
                 }
               },
