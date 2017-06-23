@@ -1,0 +1,51 @@
+.app__wrapper {
+  @include grid-row;
+  #app__main {
+    @include grid-column(24);
+  }
+}
+
+.legende {
+  position: absolute;
+  top: 320px;
+  z-index: 100;
+  display: flex;
+  width: 385px;
+  justify-content: space-between;
+  align-content: stretch;
+  .blokWrap {
+    width: 100%;
+  }
+}
+
+.fiche {
+  position: absolute;
+  top: 100px;
+  z-index: 100;
+  width: 385px;
+  h1,h4 {
+    text-align: right;
+  }
+  .details {
+    text-align: right;
+  }
+  .close, .details {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+}
+
+path {
+  cursor: pointer;
+}
+
+.procent {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  p {
+    margin-right: 14px;
+  }
+}
